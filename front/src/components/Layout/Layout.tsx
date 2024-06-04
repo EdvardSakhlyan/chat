@@ -1,12 +1,13 @@
 import { Outlet } from "react-router-dom";
 import SideBar from "../SideBar/SideBar";
+import LayoutWrapper from "../../styled/LayoutWrapper/LayoutWrapper";
 
 const Layout = () => {
   return (
-    <div>
+    <LayoutWrapper>
       <SideBar routs={["chat", "account"]} />
       <Outlet />
-    </div>
+    </LayoutWrapper>
   );
 };
 

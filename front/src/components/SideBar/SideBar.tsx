@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { NavLink } from "react-router-dom";
+import SideBarWrapper from "../../styled/SideBarWrapper/SideBarWrapper";
 
 interface ISideBarProps {
   routs: string[];
@@ -7,7 +8,7 @@ interface ISideBarProps {
 
 const SideBar: FC<ISideBarProps> = ({ routs }) => {
   return (
-    <nav>
+    <SideBarWrapper>
       <ul>
         {routs.map((rout) => (
           <li key={rout}>
@@ -15,7 +16,7 @@ const SideBar: FC<ISideBarProps> = ({ routs }) => {
           </li>
         ))}
       </ul>
-    </nav>
+    </SideBarWrapper>
   );
 };
 

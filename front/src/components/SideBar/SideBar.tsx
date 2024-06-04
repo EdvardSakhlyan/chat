@@ -1,25 +1,22 @@
-import { FC } from "react"
-import { NavLink } from "react-router-dom"
+import { FC } from "react";
+import { NavLink } from "react-router-dom";
 
 interface ISideBarProps {
-    routs: string[]
+  routs: string[];
 }
 
 const SideBar: FC<ISideBarProps> = ({ routs }) => {
-    return (
-        <nav>
-            <ul>
-              {
-                routs.map(rout => <li key={rout}>
-                    <NavLink to={rout}>
-                        {rout}
-                    </NavLink>
-                        
-                    </li>)
-              }  
-            </ul>
-        </nav>
-    )
-}
+  return (
+    <nav>
+      <ul>
+        {routs.map((rout) => (
+          <li key={rout}>
+            <NavLink to={rout}>{rout}</NavLink>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
 
-export default SideBar
+export default SideBar;
